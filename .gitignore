@@ -1,0 +1,18 @@
+# Virtual Environments
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyPI Build files
+build/
+dist/
+*.egg-info/
+
+# Local Test Images
+demo_image.png
+test.png
+s.png

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nano-ocr"
+version = "0.1.0"
+description = "A lightweight, 18MB production-ready CRNN based OCR model and engine optimized for edge devices."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Arshvir" }
+]
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "Pillow>=9.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/avarshvir/nano-ocr"
+
+[tool.setuptools.packages.find]
+include = ["nano_ocr"]
+
+[tool.setuptools.package-data]
+# This line is critical: It forces pip to bundle the .pth file with the code
+nano_ocr = ["model/*.pth"]
