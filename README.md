@@ -45,5 +45,27 @@ ocr.benchmark()
 ## Architecture
 NanoOCR utilizes a 7-layer VGG-style CNN for feature extraction (with asymmetric max-pooling), a Bidirectional LSTM (256 hidden size) for sequence context, and CTC loss for decoding.
 
+## Evaluation Metrics
+
+### Dataset Accuracy
+- ICDAR 2013: 81.28%
+- MJSynth (Unseen): 79.20%
+- IIIT5k: 78.37%
+- ICDAR 2015 (Heavy noise): 46.41%
+
+### Error Metrics
+- CTC Loss (ICDAR '13): 0.44
+- CER (ICDAR '13): 6.73%
+- CER (IIIT5k): 8.56%
+
+*CER (Character Error Rate) indicates that even when an entire word is predicted "wrong", the model typically only misses a single character.*
+
+### Error Typology (15,000 Character Sample)
+`602 Substitutions (e.g. '0' vs 'O')`
+`628 Deletions (Missing thin letters)`
+`77 Insertions (Hallucinations)`
+
+Confidence Calibration: The engine is self-aware. It averages 95.7% confidence on correct predictions, and drops to 76.7% when incorrect, allowing developers to build safe failure thresholds.
+
 ## Author
 Developed by Arshvir
