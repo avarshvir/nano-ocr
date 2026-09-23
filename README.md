@@ -5,8 +5,8 @@ A lightning-fast, production-ready Convolutional Recurrent Neural Network (CRNN)
 Built from scratch, trained on over 2.3 million synthetic and real-world images, and packaged into a tiny **18.3 MB footprint**.
 
 ## Links
-**Website:** [NanoOCR](https://avarshvir.github.io/nano-ocr/)
-**PyPI:** [pip install nano-ocr](https://pypi.org/project/nano-ocr/)
+- **Website:** [NanoOCR](https://avarshvir.github.io/nano-ocr/)
+- **PyPI:** [pip install nano-ocr](https://pypi.org/project/nano-ocr/)
 
 ## Features
 - **Ultra-Lightweight:** 4.8M parameters, under 20 MB on disk.
